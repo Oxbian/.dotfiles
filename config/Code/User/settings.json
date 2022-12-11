@@ -18,5 +18,6 @@
     "workbench.colorTheme": "Atomize",
     "editor.minimap.autohide": true,
     "doxdocgen.generic.authorName": "Oxbian",
-    "editor.fontFamily": "'JetBrainsMono Nerd Font'"
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "diffEditor.ignoreTrimWhitespace": false
 }

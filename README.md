@@ -25,3 +25,8 @@ These packages must be installed on your machine for dotfiles to work:
 - VsCode
 - Neofetch
 - Nerd Fonts
+
+# TODO:
+
+- Finish snippets for C & C++
+- Do some snippets for PHP
