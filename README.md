@@ -5,19 +5,22 @@ This repository contains my dotfiles.
 There is my vscode settings with some custom snippets, my neofetch customisation.
 Also a coding style and folder style.
 
-![Neofetch](Images/Screenshot_20221211_170500.png)
+![Neofetch](https://github.com/Oxbian/.dotfiles/blob/master/Images/Neofetch-screen.png)
+
+*The bitcoin & Ethereum address on the neofetch screenshot are fake*
 
 ## Installation
 
 To install my dotfiles, just clone the repository, and run the install file:
-`git clone && cd .DOTFILES && ./install`
+
+`git clone https://github.com/Oxbian/.dotfiles.git && cd .dotfiles && ./install`
 
 
 ## Package to install
 
 If something isn't working it's probably because a package is missing.
 
-You need to have this packages installed on your computer for this dotfiles works:
+These packages must be installed on your machine for dotfiles to work:
 
 - VsCode
 - Neofetch
