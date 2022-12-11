@@ -1,0 +1,22 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "workbench.iconTheme": "material-icon-theme",
+    "doxdocgen.generic.dateFormat": "DD-MM-YYYY",
+    "doxdocgen.generic.useGitUserName": true,
+    "doxdocgen.generic.useGitUserEmail": true,
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "workbench.editorAssociations": {
+        "*.state": "default"
+    },
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.lineHeight": 22,
+    "editor.letterSpacing": 0.5,
+    "editor.fontWeight": "400",
+    "editor.cursorBlinking": "solid",
+    "workbench.colorTheme": "Atomize",
+    "editor.minimap.autohide": true,
+    "doxdocgen.generic.authorName": "Oxbian",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'"
+}

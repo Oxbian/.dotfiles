@@ -5,5 +5,14 @@
     ~/.ssh/config:
         path: ssh/config
         create: true
-
+    ~/.config/neofetch:
+      create: true
+      glob: true
+      path: config/neofetch
+      relink: true
+    ~/.config/Code/User/:
+      create: true
+      glob: true
+      path: config/Code/User/*
+      relink: true
 
