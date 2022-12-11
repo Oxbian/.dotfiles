@@ -1,0 +1,9 @@
+Host Ritrix
+  HostName 192.168.1.34
+  User arka
+  Port 64951
+
+Host Serveur-Web
+  HostName 127.0.0.1
+  User kali
+  Port 64951
