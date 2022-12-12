@@ -1,30 +1,64 @@
 {
-     "Basic main template": {
+     "Basic C main template": {
+          "scope": "c",
           "prefix": "main",
           "body": [
                "#include <stdio.h>",
                "",
-               "int main (int argc, char *argv[]) {",
+               "int main (int argc, char *argv[]) ",
+               "{",
                "    $0",
                "    return 0;",
                "}"
           ],
           "description": "Basic main template in C"
      },
-     "Basic stdlib main template": {
+     "Basic C stdlib main template": {
+          "scope": "c",
           "prefix": "libmain",
           "body": [
                "#include <stdio.h>",
                "#include <stdlib.h>",
                "",
-               "int main (int argc, char *argv[]) {",
+               "int main (int argc, char *argv[]) ",
+               "{",
                "    $0",
                "    return 0;",
                "}"
           ],
           "description": "Basic stdlib main templace in C"
      },
+     "Basic C++ main template": {
+          "scope": "cpp",
+          "prefix": "main",
+          "body": [
+               "#include <cstdio>",
+               "",
+               "int main (int argc, char *argv[]) ",
+               "{",
+               "    $0",
+               "    return 0;",
+               "}"
+          ],
+          "description": "Basic main template in C++"
+     },
+     "Basic C++ iostream main template": {
+          "scope": "cpp",
+          "prefix": "iomain",
+          "body": [
+               "#include <cstdio>",
+               "#include <iostream>",
+               "",
+               "int main (int argc, char *argv[])",
+               "{",
+               "    $0",
+               "    return 0;",
+               "}"
+          ],
+          "description": "Basic iostream main templace in C++"
+     },
      "If statement": {
+          "scope": "c,cpp",
           "prefix": "if",
           "body": [
                "if ($1) {",
@@ -34,6 +68,7 @@
           "description": "Creates an if statement"
      },
      "Else statement": {
+          "scope": "c,cpp",
           "prefix": "else",
           "body": [
                "else {",
@@ -43,6 +78,7 @@
           "description": "Creates an else statement"
      },
      "Else if statement": {
+          "scope": "c,cpp",
           "prefix": "elif",
           "body": [
                "else if ($1) {",
@@ -52,15 +88,37 @@
           "description": "Creates an else if statement"
      },
      "For loop": {
+          "scope": "c,cpp",
           "prefix": "for",
           "body": [
                "for (int ${1:i} = ${2:0}; ${1:i} < $3; ${1:i}++) {",
                "    ${4:/* code goes here */}",
                "}"
           ],
-          "description": "Creates a for loop that runs for a certain number if iterations"
+          "description": "Creates a for loop"
+     },
+     "Reverse For loop": {
+          "scope": "c,cpp",
+          "prefix": "forrev",
+          "body": [
+               "for (int ${1:i} = $2; ${1:i} >= ${3:0}; ${1:i}--) {",
+               "    ${4:/* code goes here */}",
+               "}"
+          ],
+          "description": "Creates a reverse for loop"
+     },
+     "Range For loop": {
+          "scope": "cpp",
+          "prefix": "forrange",
+          "body": [
+               "for (auto &${1:element} : ${2:containeur}) {",
+               "    ${3:/* code goes here */}",
+               "}"
+          ],
+          "description": "Creates a range for loop"
      },
      "While loop" : {
+          "scope": "c,cpp",
           "prefix": "while",
           "body": [
                "while ($1) {",
@@ -70,6 +128,7 @@
           "description": "Creates a while loop"
      },
      "Do...while loop": {
+          "scope": "c,cpp",
           "prefix": "dowhile",
           "body": [
                "do {",
@@ -79,6 +138,7 @@
           "description": "Creates a do...while loop"
      },
      "Create linked list": {
+          "scope": "c",
           "prefix": "clist",
           "body": [
                "typedef struct {",
@@ -89,9 +149,11 @@
           "description": "Creates a linked list template"
      },
      "Create int function": {
+          "scope": "c,cpp",
           "prefix": "intf",
           "body": [
-               "int $1 ($2) {",
+               "int $1 ($2)",
+               "{",
                "    $4",
                "    return $3;",
                "}"
@@ -99,9 +161,11 @@
           "description": "Creates a function that returns an int"
      },
      "Create float function": {
+          "scope": "c,cpp",
           "prefix": "floatf",
           "body": [
-               "float $1 ($2) {",
+               "float $1 ($2) ",
+               "{",
                "    $4",
                "    return $3;",
                "}"
@@ -109,9 +173,11 @@
           "description": "Creates a function that returns a float"
      },
      "Create double function": {
+          "scope": "c,cpp",
           "prefix": "doublef",
           "body": [
-               "double $1 ($2) {",
+               "double $1 ($2)",
+               "{",
                "    $4",
                "    return $3;",
                "}"
@@ -119,9 +185,11 @@
           "description": "Creates a function that returns a double"
      },
      "Create string function": {
+          "scope": "c,cpp",
           "prefix": "strf",
           "body": [
-               "char* $1 ($2) {",
+               "char* $1 ($2)",
+               "{",
                "    $4",
                "    return $3;",
                "}"
@@ -129,9 +197,11 @@
           "description": "Creates a function that returns a string"
      },
      "Create long function": {
+          "scope": "c,cpp",
           "prefix": "longf",
           "body": [
-               "long $1 ($2) {",
+               "long $1 ($2) ",
+               "{",
                "    $4",
                "    return $3;",
                "}"
@@ -139,40 +209,18 @@
           "description": "Creates a function that returns a long"
      },
      "Create void function": {
+          "scope": "c,cpp",
           "prefix": "voidf",
           "body": [
-               "void $1 ($2) {",
+               "void $1 ($2) ",
+               "{",
                "    $3",
                "}"
           ],
           "description": "Creates a void function"
      },
-	"Create definition for virtual table": {
-		"prefix": "vtdef",
-		"body": [
-			"typedef struct ${1:ClassName}{",
-			"    struct ${2:$1VT}* vt;    ",
-			"};",
-			"",
-			"typedef struct $2",
-			"{",
-			"    // Virtual Table Function definitions",
-			"} ${3:vt$1};",
-			"",
-			"",
-			"int $1Init(struct $1 *self);",
-			"int $1Destroy(struct $1 **self);"
-		],
-		"description": "Create definition for virtual table"
-	},
-	"Create function for virtual table": {
-		"prefix": "vtfunc",
-		"body": [
-			"${1:void} (*${2:functionName})(struct ${3:ClassName} *self)"
-		],
-		"description": "Create function for virtual table"
-	},
      "Creates a header include guard": {
+          "scope": "c,cpp",
           "prefix": "ig",
           "body": [
                "#ifndef ${TM_FILENAME/(.*)\\..+$/${1:/upcase}_H/}",
@@ -185,6 +233,7 @@
           "description": "Creates header include guard based on file name"
      },
      "Include" : {
+          "scope": "c,cpp",
           "prefix": "inc",
           "body": [
                "#include <$0>"
