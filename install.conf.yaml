@@ -6,13 +6,18 @@
         path: ssh/config
         create: true
     ~/.config/neofetch:
-      create: true
-      glob: true
-      path: config/neofetch
-      relink: true
+        create: true
+        glob: true
+        path: config/neofetch
+        relink: true
     ~/.config/Code/User/:
-      create: true
-      glob: true
-      path: config/Code/User/*
-      relink: true
-
+        create: true
+        glob: true
+        path: config/Code/User/*
+        relink: true
+    ~/.local/share/fonts/jetbrains-nerd/Jetbrains-Nerd.ttf:
+        create: true
+        path: fonts/Jetbrains-Nerd.ttf
+    ~/.bashrc: 
+        path: bashrc
+        force: true

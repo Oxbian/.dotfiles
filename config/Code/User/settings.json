@@ -18,11 +18,13 @@
     "workbench.colorTheme": "Atomize",
     "editor.minimap.autohide": true,
     "doxdocgen.generic.authorName": "Oxbian",
-    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.tabSize": 4,
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "C_Cpp.default.cppStandard": "c++14",
     "C_Cpp.default.cStandard": "c11",
     "C_Cpp.default.intelliSenseMode": "linux-gcc-x86",
-    "C_Cpp.formatting": "vcFormat"
+    "C_Cpp.formatting": "vcFormat",
+    "editor.fontFamily": "JetbrainsMono Nerd Font Mono",
+    "C_Cpp.doxygen.generatedStyle": "/**"
 }
